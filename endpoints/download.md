@@ -78,7 +78,9 @@ with gzip.open(io.BytesIO(resp.content), 'rt', encoding='utf-8') as f:
 ---
 
 ## 📌 Notes
-Check our latest domain API updates here: [https://netapi.com/help/api/](https://netapi.com/help/api/)
 - The `new` filter is only supported for major gTLDs like `.com`, `.net`, `.org`.
 - Use `format=plain` if you don't want gzip compression.
 - The "list" type is lighter and faster for simple domain enumerati
+
+--
+Check our latest domain API updates here: [https://netapi.com/help/api/](https://netapi.com/help/api/)
