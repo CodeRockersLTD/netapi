@@ -2,7 +2,8 @@
 
 NetAPI offers powerful and daily-updated domain datasets via a lightweight API.
 
-**FULL DOCUMENTATION:** `https://netapi.com/help/api/`  
+
+**CHECK OUR LATEST DOMAIN API UPDATES HERE:** [https://github.com](https://netapi.com/help/api/)
 
 
 📡 **Base endpoint:** `https://netapi.com/api2/`  
