@@ -84,4 +84,4 @@ with gzip.open(io.BytesIO(resp.content), 'rt', encoding='utf-8') as f:
 
 ---
 
-Check our latest domain API updates here: [https://netapi.com/help/api/](https://netapi.com/help/api/)
+Check our latest Reverse DNS API updates here: [https://netapi.com/help/api/](https://netapi.com/help/api/#dns-api)
