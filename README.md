@@ -16,6 +16,7 @@ NetAPI offers powerful and daily-updated domain datasets via a lightweight API.
 
 ### 1. List all supported zones
 **GET** `?method=zones`
+
 [Detailed description](/endpoints/zones.md)
 
 Returns supported TLDs along with daily-update and country-code flags.  
