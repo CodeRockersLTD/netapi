@@ -81,4 +81,4 @@ else:
 
 ---
 
-Check our latest domain API updates here: [https://netapi.com/help/api/](https://netapi.com/help/api/)
+Check our latest domain and IP lookup API updates here: [https://netapi.com/help/api/](https://netapi.com/help/api/)
