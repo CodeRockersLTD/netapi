@@ -7,7 +7,7 @@ NetAPI offers powerful and daily-updated domain datasets via a lightweight API.
 
 
 📡 **Base endpoint:** `https://netapi.com/api2/`  
-🔄 Response format: comma-separated CSV (compressed by default) :contentReference[oaicite:2]{index=2}
+🔄 Response format: comma-separated CSV (compressed by default) 
 
 ---
 
@@ -17,7 +17,7 @@ NetAPI offers powerful and daily-updated domain datasets via a lightweight API.
 **GET** `?method=zones`
 
 Returns supported TLDs along with daily-update and country-code flags.  
-Example output: `com,1,0` (for `.com`) :contentReference[oaicite:3]{index=3}
+Example output: `com,1,0` (for `.com`) 
 
 ---
 
@@ -29,14 +29,14 @@ Example output: `com,1,0` (for `.com`) :contentReference[oaicite:3]{index=3}
 - `dataset_type` *(required)* — `list` (domains only) or `dataset` (with metadata)
 - `filter_type` *(required)* — `active` (all domains) or `new` (last 24 h; only for gTLDs)
 - `token` *(required)* — your API key
-- `format` *(optional)* — `plain` (GZ by default) :contentReference[oaicite:4]{index=4}
+- `format` *(optional)* — `plain` (GZ by default) 
 
 ---
 
 ### 3. List supported DNS providers
 **GET** `?method=dns`
 
-Retrieve available DNS-provider aliases like `cloudflare` or `godaddy` :contentReference[oaicite:5]{index=5}
+Retrieve available DNS-provider aliases like `cloudflare` or `godaddy` 
 
 ---
 
@@ -45,7 +45,7 @@ Retrieve available DNS-provider aliases like `cloudflare` or `godaddy` :contentR
 
 **Query parameters:**
 - `dns_alias` *(required)* — provider alias
-- `dataset_type`, `token`, and `format` as above :contentReference[oaicite:6]{index=6}
+- `dataset_type`, `token`, and `format` as above 
 
 ---
 
@@ -54,7 +54,7 @@ Retrieve available DNS-provider aliases like `cloudflare` or `godaddy` :contentR
 
 **Query parameters:**
 - `token` *(required)*
-- `format` *(optional)* :contentReference[oaicite:7]{index=7}
+- `format` *(optional)* 
 
 Returns CSV with `IP,domains_list` columns (compressed by default).
 
@@ -67,7 +67,7 @@ Returns CSV with `IP,domains_list` columns (compressed by default).
 - `domain` *(required)*
 - `token` *(required)*
 
-Returns CSV with fields like `URL, DNS1, DNS2, HOSTNAME, IP, COUNTRY_CODE` :contentReference[oaicite:8]{index=8}
+Returns CSV with fields like `URL, DNS1, DNS2, HOSTNAME, IP, COUNTRY_CODE` 
 
 ---
 
@@ -78,7 +78,7 @@ Returns CSV with fields like `URL, DNS1, DNS2, HOSTNAME, IP, COUNTRY_CODE` :cont
 - `ip` *(required)*
 - `token` *(required)*
 
-CSV fields: `DOMAIN, HOSTNAME, DNS1, DNS2` :contentReference[oaicite:9]{index=9}
+CSV fields: `DOMAIN, HOSTNAME, DNS1, DNS2` 
 
 ---
 
@@ -87,10 +87,10 @@ CSV fields: `DOMAIN, HOSTNAME, DNS1, DNS2` :contentReference[oaicite:9]{index=9}
 
 **Query parameters:**
 - `dataset_type` *(required)* — `ip`, `url`, `ip-all`, or `url-all`
-- `token` *(required)* :contentReference[oaicite:10]{index=10}
+- `token` *(required)* 
 
 ---
 
 ## 🔐 Authentication
 
-All endpoints require a valid API key via URL param:
+All endpoints except 'compromised' require a valid API token. You can obtain your API token in [NetAPI dashboard](https://netapi.com/dashboard/)
