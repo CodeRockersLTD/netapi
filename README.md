@@ -94,3 +94,7 @@ CSV fields: `DOMAIN, HOSTNAME, DNS1, DNS2`
 ## 🔐 Authentication
 
 All endpoints except 'compromised' require a valid API token. You can obtain your API token in [NetAPI dashboard](https://netapi.com/dashboard/)
+
+## 🔐 openapi.yaml
+📄 [OpenAPI Specification](./openapi.yaml)
+
