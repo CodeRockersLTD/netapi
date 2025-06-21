@@ -83,4 +83,5 @@ with gzip.open(io.BytesIO(resp.content), 'rt', encoding='utf-8') as f:
 - The "list" type is lighter and faster for simple domain enumerati
 
 --
-Check our latest domain API updates here: [https://netapi.com/help/api/](https://netapi.com/help/api/)
+
+Check our latest Registered Domain List Download API updates here: [https://netapi.com/help/api/](https://netapi.com/help/api/#list-api)
