@@ -7,7 +7,8 @@ NetAPI offers powerful and daily-updated domain datasets via a lightweight API.
 
 
 📡 **Base endpoint:** `https://netapi.com/api2/`  
-🔄 Response format: comma-separated CSV (compressed by default) 
+🔄 Response format: comma-separated CSV (compressed by default)
+
 
 ---
 
@@ -15,6 +16,7 @@ NetAPI offers powerful and daily-updated domain datasets via a lightweight API.
 
 ### 1. List all supported zones
 **GET** `?method=zones`
+[Detailed description](/endpoints/zones.md)
 
 Returns supported TLDs along with daily-update and country-code flags.  
 Example output: `com,1,0` (for `.com`) 
@@ -49,18 +51,8 @@ Retrieve available DNS-provider aliases like `cloudflare` or `godaddy`
 
 ---
 
-### 5. Reverse DNS – IP → domains
-**GET** `?method=download-ip`
 
-**Query parameters:**
-- `token` *(required)*
-- `format` *(optional)* 
-
-Returns CSV with `IP,domains_list` columns (compressed by default).
-
----
-
-### 6. Domain lookup details
+### 5. Domain lookup details
 **GET** `?method=lookup-domain`
 
 **Query parameters:**
@@ -71,7 +63,7 @@ Returns CSV with fields like `URL, DNS1, DNS2, HOSTNAME, IP, COUNTRY_CODE`
 
 ---
 
-### 7. IP lookup details
+### 6. IP lookup details
 **GET** `?method=lookup-ip`
 
 **Query parameters:**
@@ -82,7 +74,7 @@ CSV fields: `DOMAIN, HOSTNAME, DNS1, DNS2`
 
 ---
 
-### 8. Compromised IPs & URLs
+### 7. Compromised IPs & URLs
 **GET** `?method=compromised`
 
 **Query parameters:**
