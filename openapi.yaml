@@ -1,0 +1,217 @@
+openapi: 3.0.3
+info:
+  title: NetAPI
+  version: 2.0.0
+  description: Public API for accessing registered domain lists, lists of domains using particular DNS provider, and threat intelligence datasets
+    via CSV.
+servers:
+- url: https://netapi.com/api2/
+  description: Production server
+paths:
+  /:
+    get:
+      summary: List supported zones
+      description: Returns all supported TLDs and zone metadata.
+      parameters:
+      - name: method
+        in: query
+        required: true
+        schema:
+          type: string
+          enum:
+          - zones
+      responses:
+        '200':
+          description: CSV list of zones
+          content:
+            text/csv: {}
+  /download:
+    get:
+      summary: Download list of registered domains for any zone including optional domain metadata (emails, phones, IPs, DNS, Country, etc).
+      parameters:
+      - name: method
+        in: query
+        required: true
+        schema:
+          type: string
+          enum:
+          - download
+      - name: zone_tld
+        in: query
+        required: true
+        schema:
+          type: string
+      - name: dataset_type
+        in: query
+        required: true
+        schema:
+          type: string
+          enum:
+          - list
+          - dataset
+      - name: filter_type
+        in: query
+        required: true
+        schema:
+          type: string
+          enum:
+          - active
+          - new
+      - name: token
+        in: query
+        required: true
+        schema:
+          type: string
+      - name: format
+        in: query
+        required: false
+        schema:
+          type: string
+          enum:
+          - plain
+      responses:
+        '200':
+          description: CSV file containing domains or metadata
+          content:
+            text/csv: {}
+  /download-dns:
+    get:
+      summary: Download list of domains using particular DNS provider
+      parameters:
+      - name: method
+        in: query
+        required: true
+        schema:
+          type: string
+          enum:
+          - download-dns
+      - name: dns_alias
+        in: query
+        required: true
+        schema:
+          type: string
+      - name: dataset_type
+        in: query
+        required: true
+        schema:
+          type: string
+          enum:
+          - list
+          - dataset
+      - name: token
+        in: query
+        required: true
+        schema:
+          type: string
+      - name: format
+        in: query
+        required: false
+        schema:
+          type: string
+          enum:
+          - plain
+      responses:
+        '200':
+          description: CSV file of domains using specified DNS provider
+          content:
+            text/csv: {}
+  /lookup-domain:
+    get:
+      summary: Lookup domain metadata
+      parameters:
+      - name: method
+        in: query
+        required: true
+        schema:
+          type: string
+          enum:
+          - lookup-domain
+      - name: domain
+        in: query
+        required: true
+        schema:
+          type: string
+      - name: token
+        in: query
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: CSV with domain metadata
+          content:
+            text/csv: {}
+  /lookup-ip:
+    get:
+      summary: Lookup domains for IP
+      parameters:
+      - name: method
+        in: query
+        required: true
+        schema:
+          type: string
+          enum:
+          - lookup-ip
+      - name: ip
+        in: query
+        required: true
+        schema:
+          type: string
+          format: ipv4
+      - name: token
+        in: query
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: CSV with domains associated to the IP
+          content:
+            text/csv: {}
+  /dns:
+    get:
+      summary: List DNS providers
+      parameters:
+      - name: method
+        in: query
+        required: true
+        schema:
+          type: string
+          enum:
+          - dns
+      responses:
+        '200':
+          description: CSV of known & supported DNS provider aliases
+          content:
+            text/csv: {}
+  /compromised:
+    get:
+      summary: Get compromised IPs or Domains
+      parameters:
+      - name: method
+        in: query
+        required: true
+        schema:
+          type: string
+          enum:
+          - compromised
+      - name: dataset_type
+        in: query
+        required: true
+        schema:
+          type: string
+          enum:
+          - ip
+          - ip-all
+          - url
+          - url-all
+      - name: token
+        in: query
+        required: false
+        schema:
+          type: string
+      responses:
+        '200':
+          description: CSV with compromised data
+          content:
+            text/csv: {}
