@@ -65,3 +65,6 @@ print(response.text)
 - The list includes both generic and country-code TLDs.
 
 
+--
+Check our latest domain API updates here: [https://netapi.com/help/api/](https://netapi.com/help/api/)
+
