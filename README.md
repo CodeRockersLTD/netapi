@@ -2,6 +2,9 @@
 
 NetAPI offers powerful and daily-updated domain datasets via a lightweight API.
 
+**FULL DOCUMENTATION:** `https://netapi.com/help/api/`  
+
+
 📡 **Base endpoint:** `https://netapi.com/api2/`  
 🔄 Response format: comma-separated CSV (compressed by default) :contentReference[oaicite:2]{index=2}
 
