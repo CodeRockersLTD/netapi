@@ -81,4 +81,4 @@ else:
 
 ---
 
-© 2025 NetAPI.com
+Check our latest domain API updates here: [netapi.com/help/api](netapi.com/help/api)
