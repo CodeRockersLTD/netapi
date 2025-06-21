@@ -77,4 +77,4 @@ else:
 
 ---
 
-Check our latest Domain Lookup API updates here: [https://netapi.com/help/api/](https://netapi.com/help/api/)
+Check our latest Domain Lookup API updates here: [https://netapi.com/help/api/](https://netapi.com/help/api/#lookup-domain-api)
