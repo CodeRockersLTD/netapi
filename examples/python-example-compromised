@@ -9,8 +9,8 @@ API_TOKEN = "YOUR_API_KEY"
 # Parameters
 params = {
     "method": "compromised",
-    "dataset_type": "ip",  # Options: ip, url, ip-all, url-all
-    "token": API_TOKEN
+    "dataset_type": "ip"  # Options: ip, url, ip-all, url-all
+  
 }
 
 # Make request
