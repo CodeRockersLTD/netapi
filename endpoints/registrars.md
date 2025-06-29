@@ -18,7 +18,7 @@ No authentication or parameters required.
 
 Each line contains:
 
-ALIAS,PROVIDER
+ALIAS,REGISTRAR_NAME,REGISTRAR_BRAND,TOTAL_DOMAINS
 
 ### Field Descriptions:
 
