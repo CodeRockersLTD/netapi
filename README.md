@@ -59,7 +59,28 @@ Retrieve available DNS-provider aliases like `cloudflare` or `godaddy`
 ---
 
 
-### 5. Domain lookup details
+### 5. WHOIS API: List supported Registrars
+**GET** `?method=dns`
+
+[Detailed description](/endpoints/registrars.md)
+
+Retrieve available Registrar's IDs (used in the 'download-whois' method listed below)
+
+---
+
+### 6. Download WHOIS (dataset of domains using the particular Registrar)
+**GET** `?method=download-whois`
+
+[Detailed description](/endpoints/download-whois.md)
+
+**Query parameters:**
+- `registrar_id` *(required)* — provider id
+- `dataset_type`, `token`, and `format` as above 
+
+---
+
+
+### 7. Domain lookup details
 **GET** `?method=lookup-domain`
 
 [Detailed description](/endpoints/lookup-domain.md)
@@ -72,7 +93,7 @@ Returns CSV with fields like `URL, DNS1, DNS2, HOSTNAME, IP, COUNTRY_CODE`
 
 ---
 
-### 6. IP lookup details
+### 8. IP lookup details
 **GET** `?method=lookup-ip`
 
 [Detailed description](/endpoints/lookup-ip.md)
@@ -85,7 +106,8 @@ CSV fields: `DOMAIN, HOSTNAME, DNS1, DNS2`
 
 ---
 
-### 7. Compromised IPs & URLs
+
+### 9. Compromised IPs & URLs
 **GET** `?method=compromised`
 
 [Detailed description](/endpoints/compromised.md)
