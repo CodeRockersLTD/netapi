@@ -37,6 +37,8 @@ cloudflare.net
 
 CSV with additional metadata:
 REGISTRAR,DOMAIN,REGISTRATION_DATE,EXPIRATION_DATE,IP,MajesticRank, EMAILS,PHONES,COUNTRY_CODE  
+
+example:
 godaddy,example.com,2025-04-23,2029-06-19,115,info@netapi.com,13044568439,1.1.1.1,US
 
 ---
