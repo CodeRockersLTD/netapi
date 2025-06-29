@@ -60,7 +60,7 @@ Retrieve available DNS-provider aliases like `cloudflare` or `godaddy`
 
 
 ### 5. WHOIS API: List supported Registrars
-**GET** `?method=dns`
+**GET** `?method=registrars`
 
 [Detailed description](/endpoints/registrars.md)
 
